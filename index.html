@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+        <head>
+                <meta charset="utf-8">
+                <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <!-- 위 3개의 메타 태그는 *반드시* head 태그의 처음에 와야합니다; 어떤 다른 콘텐츠들은 반드시 이 태그들 *다음에* 와야 합니다 -->
+                <title><%= title %></title>
+                <link href="css/style.css" rel="stylesheet">
+                <link href="/css/bootstrap.min.css" rel="stylesheet"> <!-- boostrap은 redirect이므로 css가 아닌 /css -->
+        </head>
+        <body class="page">
+                <header>
+                        <% include ./header.html %>
+                </header>
+
+                <br />
+                <section>
+                        <ul class="list-group" id="mainlist">
+                        	<a class="list-group-item" href="/neworder"><h4>새 주문 추가</h4></a>
+                        	<a class="list-group-item" href="/result"><h4>통계 보기</h4></a>
+                        </ul>
+                </section>
+                <footer>
+                        <% include ./footer.html %>
+                </footer>
+
+                <script src="/js/jquery.js"></script> <!-- redirect javascript는 js/가 아닌 /js/ -->
+                <script src="/js/bootstrap.min.js"></script>
+                <script src="js/order.js"></script>
+                <script src="js/layout.js"></script>
+
+                <script>
+                        PCOptimization();
+                        initMainPage();
+                </script>
+        </body>
+</html>

@@ -1,0 +1,4 @@
+GET /index.html HTTP/1.0
+Host: 127.0.0.1:80
+Content-Length: 0
+
